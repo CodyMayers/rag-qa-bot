@@ -17,23 +17,19 @@ venv\Scripts\activate # (mac/linux) source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-You will also need to install [Ollama](https://ollama.com/), and then pull down the Mistral LLM using the below command:
+You will also need to install [Ollama](https://ollama.com/), and then pull down the gpt-oss-20b LLM using the below command:
 ```
-ollama pull mistral
+ollama pull gpt-oss:20b
 ```
 
 ## ▶️ Usage
-Add your documents to the data/ folder, then run the ingestion script:
-```
-python ingest.py
-```
-Launch the app:
+Simply launch the app:
 ```
 streamlit run app.py
 ```
 
 ## ⚡ Roadmap
+- Support other LLMs and embeddings
 - Support multiple file formats (txt, md, docx)
 - Show sources alongside answers
-- Support loading all the files in the data folder at once rather than one at a time (while avoiding duplicates)
 - UI element to allow user to limit the search to only some of the documents rather than all of them
